@@ -1,8 +1,8 @@
 import re
 import requests
-import threading
 import pandas as pd
 from queue import Queue
+from threading import Thread
 from bs4 import BeautifulSoup
 
 
@@ -73,9 +73,7 @@ if __name__ == "__main__":
     
     get_profile_links()
 
-    threads = []
-    for _ in range(20):
-        threads.append(threading.Thread(target=scrapp_profiles_thread))
+    threads = [Thread(target=scrapp_profiles_thread) for _ in range(10)]
 
     for thread in threads:
         thread.start()
