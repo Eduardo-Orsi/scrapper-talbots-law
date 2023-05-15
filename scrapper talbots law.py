@@ -73,7 +73,7 @@ if __name__ == "__main__":
     
     get_profile_links()
 
-    threads = [Thread(target=scrapp_profiles_thread) for _ in range(50)]
+    threads = [Thread(target=scrapp_profiles_thread) for _ in range(10)]
 
     for thread in threads:
         thread.start()
