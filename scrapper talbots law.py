@@ -51,6 +51,7 @@ def scrapp_profiles_thread() -> None:
             "bio": bio,
             "link": f"{BASE_URL}{url}"
         }
+        
         PROFILES.put(profile)
 
 def clean_email(raw_email: str) -> str:
