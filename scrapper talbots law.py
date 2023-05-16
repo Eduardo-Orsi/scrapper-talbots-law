@@ -1,8 +1,9 @@
 import re
-import requests
-import pandas as pd
 from queue import Queue
 from threading import Thread
+
+import requests
+import pandas as pd
 from bs4 import BeautifulSoup
 
 
